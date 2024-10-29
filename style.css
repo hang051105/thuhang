@@ -1,10 +1,10 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-image: url('/kem.png');
-            background-size: cover; /* Cover the entire page */
-            background-repeat: no-repeat; /* Do not repeat the image */
-            background-position: center; /* Center the image */
+            background-image: url('kem.png');
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
             color: #333;
             text-align: center;
             padding: 20px;
@@ -26,7 +26,7 @@
                         2px 2px 0 rgba(0,0,0,0.2), 
                         3px 3px 0 rgba(0,0,0,0.3);
            
-            display: inline-block; /* Cho phép căn giữa */
+            display: inline-block; 
             background-color: rgba(88, 232, 230, 0.5);
     
         }
@@ -35,7 +35,7 @@
             padding: 15px;
             box-shadow: 0 4px 10px rgba(54, 43, 69, 0.1);
             transition: all 0.3s ease;
-            background-color: rgba(255, 255, 255, 0.5); /* Màu trắng với độ mờ 50% */
+            background-color: rgba(255, 255, 255, 0.5); 
             font-size: 20px;
            
 
@@ -78,8 +78,8 @@
             margin-left: 20px;
         }
         #item-select, #quantity-input {
-            width: 200px; /* Set the width to your desired value */
-            padding: 5px; /* Optional: Add some padding for better appearance */
+            width: 200px; 
+            padding: 5px; 
         }
         #order-form {
             display: none;
@@ -165,7 +165,7 @@
         }
 
         select, input[type="number"] {
-            width: 200px; /* Maintain the desired width */
+            width: 200px; 
             padding: 5px;
             border: 1px solid #ccc;
             border-radius: 5px;
