@@ -340,16 +340,35 @@ class IceCreamShop {
     if (!confirmEndGame) return;
 
     this.displayEnding();
-     document.getElementById('game-container').style.display = 'none';
-    document.getElementById('intro-container').style.display = 'block';
-    this.constructor();
-       const backgroundMusic = document.getElementById('background-music');
-    if (backgroundMusic) {
-        backgroundMusic.pause(); 
-        backgroundMusic.currentTime = 0; 
+      this.resetGame(); 
     }
 }
 
+resetGame() {
+    document.getElementById('game-container').style.display = 'none';
+    document.getElementById('intro-container').style.display = 'block';
+
+
+    this.money = 100;
+    this.day = 1;
+    this.dailySalesLimit = 3;
+    
+  
+    this.storage = {
+        Chocolate: 10,
+        Sprinkles: 5,
+        Cones: 6,
+        Vanilla: 8,
+    };
+
+    this.updateDayInfo();
+    
+    const backgroundMusic = document.getElementById('background-music');
+    if (backgroundMusic) {
+        backgroundMusic.pause(); // Tạm dừng nhạc
+        backgroundMusic.currentTime = 0; // Đặt lại nhạc về đầu
+    }
+}
 
    
    
