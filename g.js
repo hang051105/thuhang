@@ -248,10 +248,9 @@ class IceCreamShop {
             }
             this.haggleIceCreamSale(customerOrder);
             this.dailySalesLimit--;
-        
             alert(`Successfully served ${customerOrder.name} to the customer!`);
         } else {
-          this.dailySalesLimit--;
+            this.dailySalesLimit--;
             alert("Oops! It looks like you used the wrong ingredients!\nJoe chuckles and says: 'Don't worry, folks! Mistakes happen! Give it another try!");
         }
 
