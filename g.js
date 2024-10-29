@@ -251,7 +251,7 @@ class IceCreamShop {
         
             alert(`Successfully served ${customerOrder.name} to the customer!`);
         } else {
-     
+          this.dailySalesLimit--;
             alert("Oops! It looks like you used the wrong ingredients!\nJoe chuckles and says: 'Don't worry, folks! Mistakes happen! Give it another try!");
         }
 
@@ -278,7 +278,7 @@ class IceCreamShop {
             this.dailySalesLimit--;
             alert(`Successfully served ${customerOrder.name} to the customer!`);
         } else {
-         
+              this.dailySalesLimit--;
             alert("Oops! It looks like you used the wrong ingredients!\nJoe chuckles and says: 'Don't worry, folks! Mistakes happen! Give it another try!");
         }
 
@@ -349,7 +349,7 @@ class IceCreamShop {
         if (this.money >= 200) {
             alert(`Congratulations! You have saved ${this.money} money and kept Joe Biden's ice cream shop open!`);
         } else if (this.money >= 150) {
-            alert(`Great! You have saved ${this.money} money, and Joe's ice cream shop will continue to operate.`);
+            alert(`Not bad! You earned " << money << " money. Joe's shop survives, but it’s going to be tough.`);
         } else {
             alert(`Oh no! You only saved ${this.money} money, which is far from the requirement to save the shop.`);
         }
