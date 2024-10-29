@@ -339,10 +339,28 @@ class IceCreamShop {
     const confirmEndGame = confirm("Are you sure you want to exit the game?");
     if (!confirmEndGame) return;
     this.displayEnding();
+    this.resetGame(); 
     window.close();
 
     }
-      
+    resetGame() {
+    document.getElementById('game-container').style.display = 'none';
+    document.getElementById('intro-container').style.display = 'block';
+    const backgroundMusic = document.getElementById('background-music');
+    backgroundMusic.pause(); 
+    backgroundMusic.currentTime = 0;     
+    this.money = 100;
+    this.day = 1;
+    this.dailySalesLimit = 3;  
+    this.storage = {
+        Chocolate: 10,
+        Sprinkles: 5,
+        Cones: 6,
+        Vanilla: 8,
+    };
+    this.updateDayInfo();
+    
+    }
     displayEnding() {
         if (this.money >= 200) {
             alert(`Congratulations! You have saved ${this.money} money and kept Joe Biden's ice cream shop open!`);
