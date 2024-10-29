@@ -335,13 +335,20 @@ class IceCreamShop {
     }
     
 
-    endGame() {
-        const confirmEndGame = confirm("Are you sure you want to exit the game?");
-        if (!confirmEndGame) return;
+   endGame() {
+    const confirmEndGame = confirm("Are you sure you want to exit the game?");
+    if (!confirmEndGame) return;
+
+    this.displayEnding();
+    this.resetGame();  // Thay window.close() bằng resetGame
+}
+
+resetGame() {
+    document.getElementById('game-container').style.display = 'none';
+    document.getElementById('intro-container').style.display = 'block';
+    this. constructor();
     
-        this.displayEnding();
-        window.close();
-    }
+}
     
 
     displayEnding() {
