@@ -1,8 +1,5 @@
 function welcomeUser() {
-    // Ask for user's name
     const name = prompt("What is your full name?");
-    
-    // Check if the user entered a name
     if (name) {
         alert(`Welcome ${name} to the ice cream shop!`);
     } else {
@@ -14,13 +11,8 @@ class IceCream {
         this.name = name;
         this.ingredients = ingredients;
         this.basePrice = basePrice;
-    }
-   
-}
-
-   
-        
-
+    }  
+}        
 class IceCreamShop {
     playBackgroundMusic() {
         const backgroundMusic = document.getElementById('background-music');
@@ -211,16 +203,16 @@ class IceCreamShop {
         const presidentIndex = Math.floor(Math.random() * this.presidents.length);
         const president = this.presidents[presidentIndex];
         const dialogue = this.dialogues[presidentIndex];
-        // Lấy đơn hàng ngẫu nhiên
+        
         const customerOrder = this.iceCreams[Math.floor(Math.random() * this.iceCreams.length)];
         document.getElementById('order-ingredients').innerHTML = '';
-        // Cập nhật HTML với tên khách hàng và lời nói
+        
         document.getElementById('customer-name').innerText = `Customer: ${president}`;
         document.getElementById('customer-dialogue').innerText = dialogue;
         document.getElementById('order-ingredients').innerHTML = `<strong>Order: ${customerOrder.name}</strong>`;
         
 
-        // Hiển thị yêu cầu nguyên liệu
+       
         for (const ingredient in customerOrder.ingredients) {
             document.getElementById('order-ingredients').innerHTML += `
                 <label>${ingredient} :</label>
@@ -229,16 +221,16 @@ class IceCreamShop {
             `;
         }
 
-        // Hiển thị form đơn hàng
+       
         document.getElementById('order-form').style.display = 'block';
         document.getElementById('shop-options').style.display = 'none';
 
-        // Xử lý gửi đơn hàng
+       
         document.getElementById('submit-order-button').onclick = () => {
             this.processOrder(customerOrder);
         };
 
-        // Xử lý hủy đơn hàng
+        
         document.getElementById('cancel-order-button').onclick = () => {
             this.cancelOrder();
         };
