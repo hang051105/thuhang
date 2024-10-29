@@ -338,13 +338,12 @@ class IceCreamShop {
    endGame() {
     const confirmEndGame = confirm("Are you sure you want to exit the game?");
     if (!confirmEndGame) return;
-
     this.displayEnding();
-      this.resetGame(); 
+    this.resetGame(); 
     }
 }
 
-resetGame() {
+    resetGame() {
     document.getElementById('game-container').style.display = 'none';
     document.getElementById('intro-container').style.display = 'block';
 
@@ -361,14 +360,10 @@ resetGame() {
 
     this.updateDayInfo();
     const backgroundMusic = document.getElementById('background-music');
-    if (backgroundMusic) {
         backgroundMusic.pause();
         backgroundMusic.currentTime = 0; 
-    }
+    
 }
-
-   
-   
 
     displayEnding() {
         if (this.money >= 200) {
