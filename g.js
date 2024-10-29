@@ -342,6 +342,12 @@ class IceCreamShop {
     this.displayEnding();
      document.getElementById('game-container').style.display = 'none';
     document.getElementById('intro-container').style.display = 'block';
+    this.constructor();
+       const backgroundMusic = document.getElementById('background-music');
+    if (backgroundMusic) {
+        backgroundMusic.pause(); 
+        backgroundMusic.currentTime = 0; 
+    }
 }
 
 
