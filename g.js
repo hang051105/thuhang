@@ -341,9 +341,7 @@ class IceCreamShop {
     this.displayEnding();
     this.resetGame(); 
     }
-}
-
-    resetGame() {
+      resetGame() {
     document.getElementById('game-container').style.display = 'none';
     document.getElementById('intro-container').style.display = 'block';
 
@@ -363,8 +361,7 @@ class IceCreamShop {
         backgroundMusic.pause();
         backgroundMusic.currentTime = 0; 
     
-}
-
+  }
     displayEnding() {
         if (this.money >= 200) {
             alert(`Congratulations! You have saved ${this.money} money and kept Joe Biden's ice cream shop open!`);
@@ -374,7 +371,6 @@ class IceCreamShop {
             alert(`Oh no! You only saved ${this.money} money, which is far from the requirement to save the shop.`);
         }
     }
-    
 }
 
 const iceCreamShop = new IceCreamShop();
