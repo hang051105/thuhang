@@ -340,16 +340,13 @@ class IceCreamShop {
     if (!confirmEndGame) return;
 
     this.displayEnding();
-    this.resetGame();  // Thay window.close() bằng resetGame
+     document.getElementById('game-container').style.display = 'none';
+    document.getElementById('intro-container').style.display = 'block';
 }
 
-resetGame() {
-    document.getElementById('game-container').style.display = 'none';
-    document.getElementById('intro-container').style.display = 'block';
-    this. constructor();
-    
-}
-    
+
+   
+   
 
     displayEnding() {
         if (this.money >= 200) {
