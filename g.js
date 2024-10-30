@@ -196,7 +196,7 @@ class IceCreamShop {
 
     takeCustomerOrder() {
         if (this.dailySalesLimit <= 0) {
-            alert("You have completed all orders for today. See you tomorrow!");
+            alert("All famous leaders have visited! No more customers for today.");
             return;
         }
 
@@ -340,7 +340,7 @@ class IceCreamShop {
     if (!confirmEndGame) return;
     this.displayEnding();
     this.resetGame(); 
-    window.close();
+   
 
     }
     resetGame() {
